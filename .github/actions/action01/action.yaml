@@ -1,0 +1,13 @@
+name: action01
+description: 'My first custom GitHub Action'
+inputs:
+  fullname:
+    description: 'The name to greet'
+    required: true
+    default: 'Mohammed Mansur'
+outputs:
+  greeting:
+    description: 'The greeting message'
+runs:
+  using: 'node20'
+  main: 'index.js'
