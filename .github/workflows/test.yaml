@@ -12,8 +12,5 @@ jobs:
       - name: step02
         id: step02
         uses: ./.github/actions/action01
-        with:
-          fullname: 'John Doe'
-
-      - name: step03
-        run: echo "Greeting is ${{ steps.step02.outputs.greeting }}"
+      - name:
+        run: echo "Greeting is " + ${{ steps.step02.outputs.greeting }}
