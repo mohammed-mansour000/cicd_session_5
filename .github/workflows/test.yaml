@@ -1,0 +1,19 @@
+name: Workflow 01
+on: 
+    push:
+        branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step01
+        uses: actions/checkout@v4
+
+      - name: step02
+        id: step02
+        uses: ./.github/actions/action01
+        with:
+          fullname: 'John Doe'
+
+      - name: step03
+        run: echo "Greeting is ${{ steps.step02.outputs.greeting }}"
